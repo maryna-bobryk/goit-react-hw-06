@@ -54,7 +54,12 @@ const ContactForm = () => {
           <div className={s.contactFormInput}>
             <label htmlFor={nameId} className={s.contactFormLabel}>
               <span>Name</span>
-              <Field id={nameId} type="text" name="name" />
+              <Field
+                id={nameId}
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+              />
               <ErrorMessage
                 name="name"
                 component="div"
@@ -65,7 +70,13 @@ const ContactForm = () => {
           <div className={s.contactFormInput}>
             <label htmlFor={numberId} className={s.contactFormLabel}>
               <span>Number</span>
-              <Field id={numberId} type="number" name="number" />
+              <Field
+                id={numberId}
+                type="tel"
+                pattern="^\+?[0-9\s\-]{7,20}$"
+                name="number"
+                placeholder="+49 170 1234567"
+              />
               <ErrorMessage
                 name="number"
                 component="div"
